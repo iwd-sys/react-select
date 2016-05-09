@@ -518,7 +518,7 @@ var Select = React.createClass({
 		var _this7 = this;
 
 		var menuDOM = ReactDOM.findDOMNode(this.refs.menu);
-		if (document.activeElement.isEqualNode(menuDOM)) {
+		if (menuDOM == null || document.activeElement.isEqualNode(menuDOM)) {
 			return;
 		}
 		this._blurTimeout = setTimeout(function () {
